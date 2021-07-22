@@ -56,11 +56,6 @@ body{
     width: 100%;
 }
 
-/* #name_header{
-    position: relative;
-    top: 30%;
-} */
-
 .name{
     text-align: center;
     /* transform: rotate(22deg); */
@@ -73,9 +68,11 @@ body{
     font-style: oblique;
     text-shadow: 5px 5px rgb(30, 5, 255);
     margin-top: 0%;
-    line-height: 5;
+    /* line-height: 5; */
+    padding: 10%;
     font-size: 4rem;
 }
+
 
 #social_icons{
     height: 20vh;
@@ -139,7 +136,7 @@ body{
 
 #content{
     display: flex !important;
-    width: 40vw;
+    width: 38vw;
     height: 66vh;
     justify-content: center;
     align-items: center;
@@ -250,7 +247,7 @@ body{
     position: relative;
     height: 20vh;
     padding: 1rem;
-    width: 80%;
+    width: 70%;
     margin: 1rem;
     left: 1%;
     min-height: 16vh;
@@ -295,7 +292,7 @@ body{
     position: relative;
     height: 35vh;
     padding: 1rem;
-    width: 80%;
+    width: 70%;
     margin: 1rem;
     left: 1%;
     min-height: 16vh;
@@ -382,7 +379,7 @@ body{
 
 .cert_data{
     height: 58%;
-    width: auto;
+    width: 60%;
     display: flex;
     justify-content: space-between;
     background-image: linear-gradient(90deg, rgba(255, 251, 0, 0.781), rgba(255, 0, 0, 0.788), rgba(0, 0, 255, 0.788));
@@ -671,6 +668,7 @@ section:nth-child(2n+1){
     font-size: 30px;
     cursor: pointer;
     float: right;
+    margin-right: auto;
     color: rgb(255, 0, 0);
     display: none;
 }
@@ -686,12 +684,13 @@ section:nth-child(2n+1){
     }
     nav ul{
         width: 100%;
-        height: 100vh;
-        position: absolute;
+        height: 80vh;
+        position: fixed;
         background-color: gray;
         left: 100%;
         top: 5%;
         transition: 0.8s ease ;
+        z-index: 10000 !important;
     }
     #nav_bar li{
         display: block !important;
@@ -700,5 +699,5 @@ section:nth-child(2n+1){
     #check:checked ~ ul{
         left: 0% !important;
     }
-
+    
 }
