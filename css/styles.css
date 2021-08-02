@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500&family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital@1&display=swap');
 
 html{
     margin: 0% !important;
@@ -153,7 +154,7 @@ body{
 }
 
 .same_font{
-    font-family: 'Baloo Bhai 2', cursive;
+    font-family: 'Arvo', serif;
     word-spacing: 0.5rem;
     font-weight: bold;
 }
