@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500&family=Press+Start+2P&display=swap');
+
 html{
     margin: 0% !important;
     /* background-color: rgb(214, 214, 214); */
@@ -5,40 +8,43 @@ html{
 
 body{
     margin: 0px;
+    overflow-wrap: break-word;
 }
 
-#nav_bar{
-    display: inline-block;
-    list-style-type: none;
-    padding-left: 0px;
+* {
+    box-sizing: border-box;
+  }
+  
+  
+.nav{
+    height: 60px;
+    width: 100%;
+    background-color: #4d4d4d85;
+    position: relative;
+} 
+  
+.nav-btn {
+  display: none;
+}
+  
+.nav-links {
+  display: inline;
+  font-size: 18px;
 }
 
-#nav_bar li{
-    display: inline-block;
+.nav div a {
+  display: inline-block;
+  padding: 20px;
+  text-decoration: none;
+  color: #efefef;
 }
 
-#nav_bar li a{
-    text-decoration: none;
-    margin: 20px;
-    color: rgb(255, 255, 255);
-    font-size: large;
-    font-weight: bolder;
+.nav div a:hover{
+  box-shadow: 8px 8px 10px white;
 }
 
-#nav_bar li a:hover{
-    color: rgb(0, 255, 242);
-    box-shadow: 8px 8px 10px white;
-    border-radius: 2rem;
-    animation: Zoom 2s ease-in-out infinite reverse;
-}
-
-@keyframes Zoom {
-    from{
-        font-size: 1.5rem;
-    }
-    to{
-        font-size: 1rem;
-    }
+#nav-check{
+  display: none;
 }
 
 #header{
@@ -52,13 +58,14 @@ body{
 }
 
 #navigation{
-    text-align: center;
+    text-align: center !important;
+    align-items: center;
+    justify-content: center;
     width: 100%;
 }
 
 .name{
     text-align: center;
-    /* transform: rotate(22deg); */
 }
 
 #my_name{
@@ -68,15 +75,13 @@ body{
     font-style: oblique;
     text-shadow: 5px 5px rgb(30, 5, 255);
     margin-top: 0%;
-    /* line-height: 5; */
-    padding: 10%;
+    padding-top: 10%;
     font-size: 4rem;
 }
 
 
 #social_icons{
     height: 20vh;
-    margin-top: 20;
 }
 
 .icons{
@@ -121,7 +126,7 @@ body{
     color: rgb(0, 0, 0);
     font-weight: bolder;
     font-size: 3rem;
-    font-family: 'Special Elite', cursive;
+    font-family: 'Noto Serif JP', serif;
     
 }
 
@@ -136,16 +141,19 @@ body{
 
 #content{
     display: flex !important;
-    width: 38vw;
+    width: auto;
     height: 66vh;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-left: 30%;
+}
+
+.centre{
+    text-align: center;
 }
 
 .same_font{
-    font-family: 'Fredericka the Great', cursive;
+    font-family: 'Baloo Bhai 2', cursive;
     word-spacing: 0.5rem;
     font-weight: bold;
 }
@@ -153,7 +161,6 @@ body{
 #skill_box{
     display: flex;
     flex-wrap: wrap;
-    /* background-color: aqua; */
     justify-content: space-around;
 }
 
@@ -230,13 +237,11 @@ body{
 
 .parent{
     position: relative;
-    /* width: 35%; */
-    /* border: 2px solid black; */
 }
 
 .data div img{
-    height: 15vh;
-    width: 15vw;
+    height: 12vh;
+    width: 6vw;
 }
 
 .college, .sen_secondary{
@@ -260,7 +265,7 @@ body{
     margin: 0%;
     margin-bottom: 10%;
     text-align: right;
-    font-family: 'Zen Tokyo Zoo', cursive;
+    font-family: 'Press Start 2P', cursive;
 }
 
 .b{
@@ -290,7 +295,7 @@ body{
 
 .data1{
     position: relative;
-    height: 35vh;
+    height: auto;
     padding: 1rem;
     width: 70%;
     margin: 1rem;
@@ -317,8 +322,8 @@ body{
 }
 
 .data1 div img{
-    height: 30vh;
-    width: 20vw;
+    height: 16vh;
+    width: 8vw;
     border-radius: 50%;
 }
 
@@ -379,14 +384,14 @@ body{
 
 .cert_data{
     height: 58%;
-    width: 60%;
+    width: auto;
     display: flex;
     justify-content: space-between;
-    background-image: linear-gradient(90deg, rgba(255, 251, 0, 0.781), rgba(255, 0, 0, 0.788), rgba(0, 0, 255, 0.788));
     align-items: center;
     margin: 1%;
-    box-shadow: 8px 8px 8px black;
+    box-shadow: 8px 22px 26px rgb(0, 0, 0);
     border-radius: 1.8rem;
+    background-color: azure;
 }
 
 .cert_data div p{
@@ -396,7 +401,6 @@ body{
 .click{
     position: relative;
     right: 20%;
-    /* text-align: center; */
 }
 
 .click span a{
@@ -572,20 +576,23 @@ section:nth-child(2n+1){
 }
 
 @media only screen and (max-width: 1259px){
-    
+    .data1 div img{
+        height: 10vh;
+        width: 8vw;
+        border-radius: 50%;
+    }
+    .data div img{
+        height: 12vh;
+        width: 10vw;
+    }
     .data::after{
         display: none;
     }
     .data1::after{
         display: none;
     }
-    .data1 div img{
-        height: 15vh;
-        width: 20vw;
-        border-radius: 50%;
-    }
     .cert_data{
-        height: auto !important;
+        height: 25% !important;
         border-radius: 0% !important;
     }
     .click{
@@ -645,59 +652,82 @@ section:nth-child(2n+1){
     }
 }
 
-@media only screen and (max-width: 1060px) {
+@media only screen and (max-width: 800px) {
     #content{
         height: auto !important;
         width: auto !important;
         margin-left: 5% !important;
     }
+    .nav-btn {
+        display: block;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+    .nav div label {
+        display: block;
+        width: 50px;
+        height: 60px;
+        padding: 12px;
+        font-size: 2rem;
+    }
+    label:hover,.nav  #nav-check:checked ~ div > label {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    .nav-links {
+        position: absolute;
+        display: block;
+        width: 100%;
+        background-color: #333;
+        height: 0px;
+        transition: all 0.3s ease-in;
+        overflow-y: hidden;
+        top: 60px;
+        left: 0px;
+    }
+    .nav-links a {
+        display: block;
+        width: 100%;
+    }
+    #nav-check:not(:checked) ~ .nav-links {
+        height: 0px;
+    }
+    #nav-check:checked ~ .nav-links {
+        height: 32.8rem;
+        overflow-y: auto;
+    }
 }
 
-@media only screen and (max-width: 723px) {
+@media only screen and (max-width: 600px) {
     .line{
-        border: 1px solid black !important;
-        left: 98% !important;
+        border: 2px dashed black !important;
+        left: 95% !important;
     }
     .line1{
-        border: 1px solid black !important;
-        left: 99% !important;
+        border: 2px dashed black !important;
+        left: 95% !important;
     }
-}
-
-.checkbtn{
-    font-size: 30px;
-    cursor: pointer;
-    float: right;
-    margin-right: auto;
-    color: rgb(255, 0, 0);
-    display: none;
-}
-
-#check{
-    display: none;
-}
-
-@media only screen and (max-width: 990px){
-    .checkbtn{
-        display: block;
-        margin-top: 0% !important;
+    .data{
+        flex-direction: column;
+        height: auto;
     }
-    nav ul{
-        width: 100%;
-        height: 80vh;
-        position: fixed;
-        background-color: gray;
-        left: 100%;
-        top: 5%;
-        transition: 0.8s ease ;
-        z-index: 10000 !important;
+    .data1{
+        flex-direction: column;
+        height: auto;
     }
-    #nav_bar li{
-        display: block !important;
-        margin: 2rem;
+    .image{
+        margin-left: 50%;
     }
-    #check:checked ~ ul{
-        left: 0% !important;
+    .data1 div img{
+        height: 10vh;
+        width: 12vw;
+        border-radius: 50%;
     }
-    
+    .data div img{
+        height: 10vh;
+        width: 12vw;
+    }
+    #material{
+        height: auto;
+    }
 }
